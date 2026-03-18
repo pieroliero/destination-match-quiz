@@ -16,12 +16,12 @@
   :root {
     --gold: #c9a84c;
     --gold-light: #e8c96a;
-    --dark: #0a0a14;
-    --dark2: #12121f;
-    --dark3: #1a1a2e;
-    --card: #1e1e32;
-    --card-hover: #272742;
-    --border: #2e2e4a;
+    --dark: #080808;
+    --dark2: #111111;
+    --dark3: #1a1a1a;
+    --card: #1e1e1e;
+    --card-hover: #252525;
+    --border: #2e2e2e;
     --text: #f0f0f0;
     --muted: #888;
     --green: #27ae60;
@@ -248,7 +248,7 @@
   }
   .results-preview h2 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
   .top-match-card {
-    background: linear-gradient(135deg, #1a1a2e, #1e1e3a);
+    background: linear-gradient(135deg, #1a1a1a, #222222);
     border: 1.5px solid var(--gold);
     border-radius: 16px;
     padding: 28px;
@@ -783,6 +783,20 @@ const destinations = {
     teaser: "One of the most organized adult cities on earth. Every lane is mapped. Move deliberately and it delivers.",
     desc: "Bangkok is one of the most organized adult cities on earth. Every lane is mapped. Every service has a process. Move deliberately and it delivers. Best for structure lovers, first-timers, and anyone who wants efficiency over emotion. Skip if you hate neon, negotiation, or too many choices.",
     guideUrl: 'https://www.passportpro.co/store', guideName: 'Asia Guide', guidePrice: '$19.99'
+  },
+  tokyo: {
+    name: 'Tokyo', country: 'Japan 🇯🇵', flag: '🇯🇵', region: 'asia', score: 0,
+    rating: '4/5', tagline: 'Elite Aesthetics, World-Class Everything',
+    teaser: "The most sophisticated Passport Bro city on earth. Insane food, elite nightlife, and dating apps that go crazy — if you know how to play it.",
+    desc: "Tokyo is the most sophisticated city on earth for the cultivated traveler. The food scene is legendary, the nightlife is layered and wild if you know where to look, and apps like Tinder and Pairs pop off hard. Japan is one of the safest countries in the world — zero street hassle. Best for culture lovers, foodies, and app-first players with a generous budget. Not a pro scene city — don't come expecting Bangkok. Skip if you want transactional ease or you're on a tight budget.",
+    guideUrl: 'https://www.passportpro.co/store', guideName: 'Asia Guide', guidePrice: '$19.99'
+  },
+  stockholm: {
+    name: 'Stockholm', country: 'Sweden 🇸🇪', flag: '🇸🇪', region: 'europe', score: 0,
+    rating: '3.5/5', tagline: 'Apps Pop Off, Safety Is Guaranteed',
+    teaser: "Extremely safe, great apps, and Scandinavian women who are direct and open-minded. The cold weather makes people want to connect.",
+    desc: "Stockholm is one of the safest cities in Europe — zero street crime, easy to navigate, perfect for first-timers. The app scene goes off: Tinder and Bumble are genuinely how people meet here. Scandinavian women are direct, confident, and open-minded. The nightlife is proper club culture. No pro scene to speak of. Best for first-timers, app players, and anyone wanting clean, safe, high-quality experiences in Europe. Skip if you're hunting transactional options or need warm weather.",
+    guideUrl: 'https://www.passportpro.co/store', guideName: 'Europe Guide', guidePrice: '$19.99'
   }
 };
 
@@ -794,26 +808,26 @@ const quickTripScoresByRegion = {
   northamerica: {
     tijuana: 4, mexicocity: 3, cartagena: 3, medellin: 3, lima: 2,
     saopaulo: -4, rio: -4, balneario: -4,
-    amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3,
-    bangkok: -3, pattaya: -3, manila: -3, bali: -3, angeles: -3, hcmc: -3, phuket: -3, siargao: -3, seoul: -3
+    amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3, stockholm: -3,
+    bangkok: -3, pattaya: -3, manila: -3, bali: -3, angeles: -3, hcmc: -3, phuket: -3, siargao: -3, seoul: -3, tokyo: -3
   },
   // LATAM: boost LATAM, penalize Europe & Asia
   latam: {
     medellin: 4, cartagena: 4, rio: 4, balneario: 4, saopaulo: 3, lima: 3, tijuana: 2, mexicocity: 2,
-    amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3,
-    bangkok: -3, pattaya: -3, manila: -3, bali: -3, angeles: -3, hcmc: -3, phuket: -3, siargao: -3, seoul: -3
+    amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3, stockholm: -3,
+    bangkok: -3, pattaya: -3, manila: -3, bali: -3, angeles: -3, hcmc: -3, phuket: -3, siargao: -3, seoul: -3, tokyo: -3
   },
   // Europe: boost Europe, penalize LATAM & Asia
   europe: {
-    amsterdam: 4, budapest: 4, athens: 4, ibiza: 4, split: 3, hamburg: 3, bucharest: 3, mykonos: 3, austria: 3,
+    amsterdam: 4, budapest: 4, athens: 4, ibiza: 4, split: 3, hamburg: 3, bucharest: 3, mykonos: 3, austria: 3, stockholm: 4,
     medellin: -3, cartagena: -3, rio: -3, balneario: -3, saopaulo: -3, lima: -3, tijuana: -3, mexicocity: -3,
-    bangkok: -3, pattaya: -3, manila: -3, bali: -3, angeles: -3, hcmc: -3, phuket: -3, siargao: -3, seoul: -3
+    bangkok: -3, pattaya: -3, manila: -3, bali: -3, angeles: -3, hcmc: -3, phuket: -3, siargao: -3, seoul: -3, tokyo: -3
   },
   // Asia: boost Asia, penalize LATAM & Europe
   asia: {
-    bangkok: 4, pattaya: 4, manila: 4, bali: 4, angeles: 3, hcmc: 3, phuket: 3, siargao: 3, seoul: 3,
+    bangkok: 4, pattaya: 4, manila: 4, bali: 4, angeles: 3, hcmc: 3, phuket: 3, siargao: 3, seoul: 3, tokyo: 4,
     medellin: -3, cartagena: -3, rio: -3, balneario: -3, saopaulo: -3, lima: -3, tijuana: -3, mexicocity: -3,
-    amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3
+    amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3, stockholm: -3
   }
 };
 
@@ -879,29 +893,29 @@ function buildQuestions() { return [
     title: "What's your daily travel budget?",
     sub: "Be honest. The algorithm knows.",
     options: [
-      { label: "Stretch it", sub: "$50–150/day", scores: { pattaya: 3, manila: 3, bangkok: 2, hcmc: 2, tijuana: 3, lima: 3, mexicocity: 2, bucharest: 2, bali: 2, siargao: 2, phuket: 2, angeles: 3, ibiza: -4, mykonos: -4, amsterdam: -2 } },
-      { label: "Comfortable", sub: "$150–300/day", scores: { medellin: 3, cartagena: 2, rio: 2, athens: 2, hcmc: 1, saopaulo: 2, mexicocity: 3, tijuana: 2, amsterdam: 2, budapest: 3, hamburg: 2, split: 2, seoul: 2, bali: 2, phuket: 2, angeles: 2, bangkok: 3 } },
-      { label: "Generous", sub: "$300–500/day", scores: { rio: 3, balneario: 3, athens: 2, cartagena: 2, saopaulo: 3, amsterdam: 3, hamburg: 2, budapest: 2, seoul: 2, ibiza: 2 } },
-      { label: "High Roller", sub: "$500+/day", scores: { ibiza: 4, mykonos: 4, athens: 2, amsterdam: 2, rio: 2, seoul: 2, bangkok: 3, balneario: -3, saopaulo: -1, pattaya: -4, angeles: -5, manila: -3, hcmc: -2, budapest: -2, tijuana: -4 } }
+      { label: "Stretch it", sub: "$50–150/day", scores: { pattaya: 3, manila: 3, bangkok: 2, hcmc: 2, tijuana: 3, lima: 3, mexicocity: 2, bucharest: 2, bali: 2, siargao: 2, phuket: 2, angeles: 3, ibiza: -4, mykonos: -4, amsterdam: -2, tokyo: -4, stockholm: -3 } },
+      { label: "Comfortable", sub: "$150–300/day", scores: { medellin: 3, cartagena: 2, rio: 2, athens: 2, hcmc: 1, saopaulo: 2, mexicocity: 3, tijuana: 2, amsterdam: 2, budapest: 3, hamburg: 2, split: 2, seoul: 2, bali: 2, phuket: 2, angeles: 2, bangkok: 3, tokyo: 2, stockholm: 2 } },
+      { label: "Generous", sub: "$300–500/day", scores: { rio: 3, balneario: 3, athens: 2, cartagena: 2, saopaulo: 3, amsterdam: 3, hamburg: 2, budapest: 2, seoul: 2, ibiza: 2, bangkok: 2, tokyo: 3, stockholm: 2 } },
+      { label: "High Roller", sub: "$500+/day", scores: { ibiza: 4, mykonos: 4, athens: 2, amsterdam: 2, rio: 2, seoul: 2, bangkok: 3, tokyo: 3, stockholm: 2, balneario: -3, saopaulo: -1, pattaya: -4, angeles: -5, manila: -3, hcmc: -2, budapest: -2, tijuana: -4 } }
     ]
   },
   {
     title: "What type of women are you most attracted to?",
     sub: "The market needs to know your preferences.",
     options: [
-      { label: "Latinas", sub: "Passion, fire, curves", scores: { medellin: 4, cartagena: 3, rio: 3, balneario: 3, saopaulo: 4, tijuana: 4, mexicocity: 3, lima: 2, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, bangkok: -4, pattaya: -4, manila: -4, bali: -4, angeles: -4, hcmc: -4, phuket: -4, siargao: -4, seoul: -4 } },
-      { label: "Asian women", sub: "Feminine, graceful, exotic", scores: { pattaya: 3, manila: 3, hcmc: 3, bangkok: 2, seoul: 3, bali: 2, siargao: 2, angeles: 3, phuket: 3, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, tijuana: -4, mexicocity: -4, lima: -4, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4 } },
-      { label: "European women", sub: "Mediterranean, sophisticated, direct", scores: { athens: 4, ibiza: 3, amsterdam: 2, hamburg: 2, budapest: 3, bucharest: 2, split: 2, mykonos: 2, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, tijuana: -4, mexicocity: -4, lima: -4, bangkok: -4, pattaya: -4, manila: -4, bali: -4, angeles: -4, hcmc: -4, phuket: -4, siargao: -4, seoul: -4 } },
-      { label: "Open to anything", sub: "Let the market decide", scores: { medellin: 1, cartagena: 1, rio: 1, balneario: 1, saopaulo: 1, lima: 1, tijuana: 1, mexicocity: 1, amsterdam: 1, hamburg: 1, budapest: 1, bucharest: 1, austria: 1, athens: 1, split: 1, ibiza: 1, mykonos: 1, seoul: 1, bali: 1, siargao: 1, angeles: 1, manila: 1, hcmc: 1, phuket: 1, pattaya: 1, bangkok: 1 } }
+      { label: "Latinas", sub: "Passion, fire, curves", scores: { medellin: 4, cartagena: 3, rio: 3, balneario: 3, saopaulo: 4, tijuana: 4, mexicocity: 3, lima: 2, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, bangkok: -4, pattaya: -4, manila: -4, bali: -4, angeles: -4, hcmc: -4, phuket: -4, siargao: -4, seoul: -4, tokyo: -4, stockholm: -4 } },
+      { label: "Asian women", sub: "Feminine, graceful, exotic", scores: { pattaya: 3, manila: 3, hcmc: 3, bangkok: 2, seoul: 3, bali: 2, siargao: 2, angeles: 3, phuket: 3, tokyo: 4, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, tijuana: -4, mexicocity: -4, lima: -4, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, stockholm: -4 } },
+      { label: "European women", sub: "Mediterranean, sophisticated, direct", scores: { athens: 4, ibiza: 3, amsterdam: 2, hamburg: 2, budapest: 3, bucharest: 2, split: 2, mykonos: 2, stockholm: 3, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, tijuana: -4, mexicocity: -4, lima: -4, bangkok: -4, pattaya: -4, manila: -4, bali: -4, angeles: -4, hcmc: -4, phuket: -4, siargao: -4, seoul: -4, tokyo: -4 } },
+      { label: "Open to anything", sub: "Let the market decide", scores: { medellin: 1, cartagena: 1, rio: 1, balneario: 1, saopaulo: 1, lima: 1, tijuana: 1, mexicocity: 1, amsterdam: 1, hamburg: 1, budapest: 1, bucharest: 1, austria: 1, athens: 1, split: 1, ibiza: 1, mykonos: 1, seoul: 1, bali: 1, siargao: 1, angeles: 1, manila: 1, hcmc: 1, phuket: 1, pattaya: 1, bangkok: 1, tokyo: 1, stockholm: 1 } }
     ]
   },
   {
     title: "What's your vibe on a trip?",
     sub: "How do you move when nobody's watching?",
     options: [
-      { label: "Nightlife & going out", sub: "Dancing, bars, late nights", scores: { medellin: 3, balneario: 3, pattaya: 3, ibiza: 3, athens: 2, saopaulo: 3, tijuana: 3, amsterdam: 3, hamburg: 3, budapest: 3, split: 2, mykonos: 2, seoul: 2, bali: 2, phuket: 2, angeles: 2, rio: 3, cartagena: 2, bangkok: 3 } },
-      { label: "Culture & food", sub: "Exploring, eating, experiencing", scores: { hcmc: 3, athens: 3, cartagena: 2, rio: 2, lima: 4, mexicocity: 3, amsterdam: 2, budapest: 2, seoul: 3, bucharest: 2 } },
-      { label: "Beach & relax", sub: "Sun, water, no agenda", scores: { cartagena: 3, balneario: 4, ibiza: 2, pattaya: 2, tijuana: 2, split: 3, mykonos: 3, bali: 4, siargao: 4, phuket: 3, budapest: -3, bucharest: -3, austria: -3, mexicocity: -3, angeles: -3, medellin: -2, hamburg: -2, amsterdam: -2, saopaulo: -2, seoul: -2, bangkok: -2, lima: -2 } },
+      { label: "Nightlife & going out", sub: "Dancing, bars, late nights", scores: { medellin: 3, balneario: 3, pattaya: 3, ibiza: 3, athens: 2, saopaulo: 3, tijuana: 3, amsterdam: 3, hamburg: 3, budapest: 3, split: 2, mykonos: 2, seoul: 2, bali: 2, phuket: 2, angeles: 2, rio: 3, cartagena: 2, bangkok: 3, manila: 3, tokyo: 3, stockholm: 3 } },
+      { label: "Culture & food", sub: "Exploring, eating, experiencing", scores: { hcmc: 3, athens: 5, cartagena: 2, rio: 2, lima: 4, mexicocity: 3, budapest: 3, seoul: 3, bucharest: 2, split: 2, ibiza: -3, mykonos: -2, pattaya: -2, amsterdam: -1, tokyo: 5, stockholm: 2 } },
+      { label: "Beach & relax", sub: "Sun, water, no agenda", scores: { cartagena: 4, rio: 3, balneario: 4, ibiza: 2, pattaya: 2, tijuana: 2, split: 3, mykonos: 3, bali: 4, siargao: 4, phuket: 3, budapest: -3, bucharest: -3, austria: -3, mexicocity: -3, angeles: -3, medellin: -4, hamburg: -3, amsterdam: -3, saopaulo: -3, seoul: -3, bangkok: -3, hcmc: -3, manila: -3, lima: -2, tokyo: -4, stockholm: -4 } },
       { label: "Full send — all of it", sub: "Maximum passport ROI", scores: { medellin: 2, balneario: 2, pattaya: 2, rio: 2, ibiza: 2, tijuana: 2, saopaulo: 2, amsterdam: 2, budapest: 2, angeles: 3, phuket: 2, cartagena: 2, mykonos: 2, bali: 2 } }
     ]
   },
@@ -909,18 +923,18 @@ function buildQuestions() { return [
     title: "What region are you most curious about?",
     sub: "Trust the algorithm to pick your market.",
     options: [
-      { label: "Latin America", sub: "LATAM energy, passion, chaos", scores: { medellin: 4, cartagena: 4, rio: 4, balneario: 4, saopaulo: 4, lima: 2, tijuana: 4, mexicocity: 3, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, seoul: -4, bali: -4, siargao: -4, angeles: -4, manila: -4, hcmc: -4, phuket: -4, pattaya: -4, bangkok: -4 } },
-      { label: "Europe", sub: "Old world, new experiences", scores: { amsterdam: 4, hamburg: 3, budapest: 4, bucharest: 3, austria: 2, athens: 4, split: 3, ibiza: 4, mykonos: 3, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, lima: -4, tijuana: -4, mexicocity: -4, seoul: -4, bali: -4, siargao: -4, angeles: -4, manila: -4, hcmc: -4, phuket: -4, pattaya: -4, bangkok: -4 } },
-      { label: "Asia", sub: "Southeast Asia & beyond", scores: { seoul: 3, bali: 4, siargao: 3, angeles: 4, manila: 4, hcmc: 4, phuket: 3, pattaya: 4, bangkok: 4, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, lima: -4, tijuana: -4, mexicocity: -4, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4 } },
-      { label: "No preference", sub: "Let the algorithm decide", scores: { medellin: 1, cartagena: 1, rio: 1, balneario: 1, saopaulo: 1, lima: 1, tijuana: 1, mexicocity: 1, amsterdam: 1, hamburg: 1, budapest: 1, bucharest: 1, austria: 1, athens: 1, split: 1, ibiza: 1, mykonos: 1, seoul: 1, bali: 1, siargao: 1, angeles: 1, manila: 1, hcmc: 1, phuket: 1, pattaya: 1, bangkok: 1 } }
+      { label: "Latin America", sub: "LATAM energy, passion, chaos", scores: { medellin: 4, cartagena: 4, rio: 4, balneario: 4, saopaulo: 4, lima: 2, tijuana: 4, mexicocity: 3, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, seoul: -4, bali: -4, siargao: -4, angeles: -4, manila: -4, hcmc: -4, phuket: -4, pattaya: -4, bangkok: -4, tokyo: -4, stockholm: -4 } },
+      { label: "Europe", sub: "Old world, new experiences", scores: { amsterdam: 4, hamburg: 3, budapest: 4, bucharest: 3, austria: 2, athens: 4, split: 3, ibiza: 4, mykonos: 3, stockholm: 4, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, lima: -4, tijuana: -4, mexicocity: -4, seoul: -4, bali: -4, siargao: -4, angeles: -4, manila: -4, hcmc: -4, phuket: -4, pattaya: -4, bangkok: -4, tokyo: -4 } },
+      { label: "Asia", sub: "Southeast Asia & beyond", scores: { seoul: 3, bali: 4, siargao: 3, angeles: 4, manila: 4, hcmc: 4, phuket: 3, pattaya: 4, bangkok: 4, tokyo: 4, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, lima: -4, tijuana: -4, mexicocity: -4, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, stockholm: -4 } },
+      { label: "No preference", sub: "Let the algorithm decide", scores: { medellin: 1, cartagena: 1, rio: 1, balneario: 1, saopaulo: 1, lima: 1, tijuana: 1, mexicocity: 1, amsterdam: 1, hamburg: 1, budapest: 1, bucharest: 1, austria: 1, athens: 1, split: 1, ibiza: 1, mykonos: 1, seoul: 1, bali: 1, siargao: 1, angeles: 1, manila: 1, hcmc: 1, phuket: 1, pattaya: 1, bangkok: 1, tokyo: 1, stockholm: 1 } }
     ]
   },
   {
     title: "What's your safety comfort level?",
     sub: "Honest answer only.",
     options: [
-      { label: "I want very safe", sub: "Low risk, smooth experience", scores: { athens: 3, ibiza: 2, cartagena: 2, manila: 2, lima: 2, amsterdam: 3, budapest: 2, siargao: 2, split: 2, seoul: 3 } },
-      { label: "I can handle some risk", sub: "With the right intel", scores: { medellin: 3, rio: 2, hcmc: 2, pattaya: 2, bangkok: 2, saopaulo: 3, mexicocity: 2, tijuana: 2, hamburg: 2, bucharest: 2, angeles: 2, phuket: 2 } },
+      { label: "I want very safe", sub: "Low risk, smooth experience", scores: { athens: 3, ibiza: 2, cartagena: 2, manila: 2, lima: 2, amsterdam: 3, budapest: 2, siargao: 2, split: 2, seoul: 3, tokyo: 3, stockholm: 3, angeles: -2, pattaya: -2 } },
+      { label: "I can handle some risk", sub: "With the right intel", scores: { medellin: 3, rio: 2, cartagena: 2, hcmc: 2, pattaya: 2, bangkok: 2, saopaulo: 3, mexicocity: 2, tijuana: 2, hamburg: 2, bucharest: 2, angeles: 2, phuket: 2 } },
       { label: "I'm a veteran", sub: "I know how to move anywhere", scores: { balneario: 3, rio: 2, medellin: 2, pattaya: 2, tijuana: 3, saopaulo: 2, angeles: 2, bali: 2, bangkok: 2 } }
     ]
   },
@@ -928,19 +942,19 @@ function buildQuestions() { return [
     title: "How experienced are you at this?",
     sub: "First rodeo or seasoned player?",
     options: [
-      { label: "First time going abroad for this", sub: "New to the game", scores: { cartagena: 3, manila: 3, pattaya: 2, athens: 2, bangkok: 2, tijuana: 2, mexicocity: 2, lima: 2, amsterdam: 3, budapest: 2, phuket: 2, bali: 2, seoul: 3 } },
-      { label: "Done it a couple times", sub: "Getting the hang of it", scores: { medellin: 2, hcmc: 2, rio: 2, ibiza: 2, saopaulo: 2, mexicocity: 2, tijuana: 2, budapest: 2, split: 2, bali: 2, phuket: 2, seoul: 2, angeles: 2, cartagena: 2 } },
-      { label: "Veteran traveler", sub: "Been doing this", scores: { balneario: 3, rio: 2, medellin: 2, pattaya: 2, tijuana: 3, saopaulo: 3, hamburg: 2, bucharest: 2, angeles: 2, cartagena: 2, ibiza: 2, mykonos: 2, bali: 2, bangkok: 3 } }
+      { label: "First time going abroad for this", sub: "New to the game", scores: { cartagena: 3, manila: 3, pattaya: 2, athens: 2, bangkok: 2, tijuana: 2, mexicocity: 2, lima: 2, amsterdam: 3, budapest: 2, phuket: 2, bali: 2, seoul: 3, tokyo: 3, stockholm: 3 } },
+      { label: "Done it a couple times", sub: "Getting the hang of it", scores: { medellin: 2, hcmc: 2, rio: 2, ibiza: 2, saopaulo: 2, mexicocity: 2, tijuana: 2, budapest: 2, split: 2, bali: 2, phuket: 2, seoul: 2, angeles: 2, cartagena: 2, athens: 1, bangkok: 2, tokyo: 2, stockholm: 2 } },
+      { label: "Veteran traveler", sub: "Been doing this", scores: { balneario: 3, rio: 2, medellin: 2, pattaya: 2, tijuana: 3, saopaulo: 3, hamburg: 2, bucharest: 2, angeles: 2, cartagena: 2, ibiza: 2, mykonos: 2, bali: 2, bangkok: 3, athens: 2, budapest: 2, split: 2, tokyo: 2, stockholm: 2 } }
     ]
   },
   {
     title: "How do you prefer to meet women?",
     sub: "The algorithm doesn't judge.",
     options: [
-      { label: "Apps", sub: "Dating apps, swipe game", scores: { manila: 4, seoul: 4, medellin: 3, cartagena: 2, hcmc: 2, bangkok: 2, lima: 2, budapest: 2, bucharest: 2, mexicocity: 2, siargao: 2, bali: 1 } },
-      { label: "Nightlife", sub: "Bars, clubs, civilian game", scores: { medellin: 4, ibiza: 4, budapest: 3, balneario: 3, rio: 3, saopaulo: 3, amsterdam: 3, athens: 3, split: 3, cartagena: 2, bali: 2, seoul: 2, hamburg: 2, mykonos: 2 } },
-      { label: "Pro scene", sub: "Organized, no guessing", scores: { pattaya: 4, angeles: 4, bangkok: 4, phuket: 3, manila: 3, hcmc: 3, tijuana: 3, hamburg: 3, austria: 3, athens: 2, budapest: 2, ibiza: 2, mykonos: 2, medellin: 2, cartagena: 3, mexicocity: -2, lima: -2 } },
-      { label: "All of the above", sub: "Maximum options open", scores: { medellin: 2, cartagena: 2, rio: 2, balneario: 2, saopaulo: 2, tijuana: 2, bangkok: 2, pattaya: 2, manila: 2, budapest: 2, bali: 2, athens: 2, ibiza: 2, hcmc: 2, mykonos: 2 } }
+      { label: "Apps", sub: "Dating apps, swipe game", scores: { manila: 4, seoul: 4, tokyo: 4, stockholm: 3, medellin: 3, cartagena: 2, hcmc: 2, bangkok: 2, lima: 2, budapest: 2, bucharest: 2, mexicocity: 2, siargao: 2, bali: 1, athens: 2 } },
+      { label: "Nightlife", sub: "Bars, clubs, civilian game", scores: { medellin: 4, ibiza: 4, budapest: 3, balneario: 3, rio: 3, saopaulo: 3, amsterdam: 3, athens: 3, split: 3, cartagena: 2, bali: 2, seoul: 2, hamburg: 2, mykonos: 2, tokyo: 2, stockholm: 3 } },
+      { label: "Pro scene", sub: "Organized, no guessing", scores: { bangkok: 4, manila: 4, angeles: 4, pattaya: 3, hcmc: 3, phuket: 2, tijuana: 3, hamburg: 3, austria: 3, athens: 2, budapest: 2, ibiza: 2, mykonos: 2, medellin: 2, cartagena: 3, mexicocity: -2, lima: -2, seoul: -3, bali: -2, tokyo: -5, stockholm: -4 } },
+      { label: "All of the above", sub: "Maximum options open", scores: { medellin: 2, cartagena: 2, rio: 2, balneario: 2, saopaulo: 2, tijuana: 2, bangkok: 2, pattaya: 2, manila: 2, budapest: 2, bali: 2, athens: 2, ibiza: 2, hcmc: 2, mykonos: 2, tokyo: 1, stockholm: 1 } }
     ]
   },
   {
@@ -948,8 +962,8 @@ function buildQuestions() { return [
     sub: "Time in market matters.",
     options: [
       { label: "Quick trip", sub: "5–7 days", scores: quickTripScoresByRegion[userHomeRegion] },
-      { label: "Standard", sub: "1–2 weeks", scores: { medellin: 2, rio: 2, cartagena: 2, saopaulo: 2, mexicocity: 2, lima: 2, budapest: 2, amsterdam: 2, hamburg: 2, ibiza: 2, athens: 2, split: 2, bali: 2, bangkok: 2, pattaya: 2, manila: 2, hcmc: 2, phuket: 2, seoul: 2 } },
-      { label: "Extended stay", sub: "A month or more", scores: { balneario: 3, medellin: 2, saopaulo: 2, bali: 3, siargao: 3, pattaya: 2, hcmc: 2, angeles: 3, phuket: 2, bangkok: 3, ibiza: 3, mykonos: 2, seoul: 3, tijuana: -3 } }
+      { label: "Standard", sub: "1–2 weeks", scores: { medellin: 2, rio: 2, cartagena: 2, saopaulo: 2, mexicocity: 2, lima: 2, budapest: 2, amsterdam: 2, hamburg: 2, ibiza: 2, athens: 2, split: 2, bali: 2, bangkok: 2, pattaya: 2, manila: 2, hcmc: 2, phuket: 2, seoul: 2, tokyo: 2, stockholm: 2 } },
+      { label: "Extended stay", sub: "A month or more", scores: { balneario: 3, medellin: 2, saopaulo: 2, bali: 3, siargao: 3, pattaya: 2, hcmc: 2, angeles: 3, phuket: 2, bangkok: 3, ibiza: 2, mykonos: 2, seoul: 3, tijuana: -3, athens: 3, budapest: 2, split: 2, lima: 2, manila: 2, tokyo: 2, stockholm: 3 } }
     ]
   }
 ]; }
@@ -1049,8 +1063,16 @@ function prevQuestion() {
 function calculateResults() {
   showScreen('screen-calculating');
   setTimeout(() => {
-    // Sort destinations by score
+    // Hard-filter by selected region (question index 3)
+    const regionQ = questions[3]; // "What region are you most curious about?"
+    const regionAns = answers[3];
+    const regionLabel = regionAns !== undefined ? regionQ.options[regionAns].label : 'No preference';
+    const regionMap = { 'Latin America': 'latam', 'Europe': 'europe', 'Asia': 'asia' };
+    const lockedRegion = regionMap[regionLabel]; // undefined if "No preference"
+
+    // Sort destinations by score, excluding cities outside chosen region
     topMatches = Object.entries(destinations)
+      .filter(([key, d]) => !lockedRegion || d.region === lockedRegion)
       .sort((a, b) => b[1].score - a[1].score)
       .slice(0, 3)
       .map(([key, d]) => ({ key, ...d }));
