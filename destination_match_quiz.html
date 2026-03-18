@@ -6,7 +6,7 @@
 <title>Destination Match Quiz™ | Passport Pro by PieroLiero</title>
 <link rel="icon" type="image/png" href="favicon.png"/>
 <meta property="og:title" content="Destination Match Quiz™ | Passport Pro"/>
-<meta property="og:description" content="Find your highest ROI travel market. 8 questions. Personalized results."/>
+<meta property="og:description" content="Find your highest ROI travel market. 7 questions. Personalized results."/>
 <meta property="og:image" content="og_image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -40,7 +40,6 @@
     max-width: 580px;
     margin: 0 auto;
   }
-
   /* HEADER */
   .header {
     text-align: center;
@@ -66,7 +65,6 @@
     font-size: 14px;
     line-height: 1.5;
   }
-
   /* PROGRESS */
   .progress-wrap {
     margin-bottom: 28px;
@@ -90,12 +88,10 @@
     border-radius: 2px;
     transition: width 0.4s ease;
   }
-
   /* SCREEN TRANSITIONS */
   .screen { display: none; }
   .screen.active { display: block; animation: fadeIn 0.3s ease; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-
   /* QUESTION */
   .question-title {
     font-size: 22px;
@@ -156,7 +152,6 @@
     font-size: 12px;
     color: var(--muted);
   }
-
   /* NAV BUTTONS */
   .nav {
     display: flex;
@@ -188,7 +183,6 @@
     padding: 14px 20px;
   }
   .btn-secondary:hover { border-color: var(--gold); color: var(--text); }
-
   /* INTRO SCREEN */
   .intro-card {
     background: var(--dark2);
@@ -211,7 +205,6 @@
   .stat-num { font-size: 22px; font-weight: 800; color: var(--gold); }
   .stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .btn-full { width: 100%; font-size: 16px; padding: 16px; }
-
   /* CALCULATING */
   .calculating {
     text-align: center;
@@ -240,7 +233,6 @@
   .calc-step:nth-child(2) { animation-delay: 0.8s; }
   .calc-step:nth-child(3) { animation-delay: 1.3s; }
   .calc-step:nth-child(4) { animation-delay: 1.8s; }
-
   /* RESULTS PREVIEW */
   .results-preview {
     text-align: center;
@@ -293,7 +285,6 @@
   }
   .match-pct { font-size: 13px; color: var(--gold); font-weight: 700; text-align: right; }
   .match-teaser { font-size: 13px; color: var(--muted); margin-top: 12px; line-height: 1.5; }
-
   /* LOCKED RESULTS */
   .locked-results {
     display: flex;
@@ -321,7 +312,6 @@
     color: var(--muted);
   }
   .lock-icon { font-size: 20px; margin-bottom: 4px; }
-
   /* EMAIL GATE */
   .email-gate {
     background: var(--dark2);
@@ -347,7 +337,6 @@
   .email-input:focus { border-color: var(--gold); }
   .email-input::placeholder { color: var(--muted); }
   .privacy-note { font-size: 11px; color: var(--muted); margin-top: 4px; }
-
   /* FULL RESULTS */
   .full-results-header {
     text-align: center;
@@ -355,7 +344,6 @@
   }
   .full-results-header h2 { font-size: 20px; font-weight: 800; margin-bottom: 4px; }
   .full-results-header p { font-size: 13px; color: var(--muted); }
-
   .result-card {
     background: var(--card);
     border: 1.5px solid var(--border);
@@ -382,14 +370,12 @@
   .rank-1 .rank-label { background: var(--gold); color: #000; }
   .rank-2 .rank-label { background: #aaa; color: #000; }
   .rank-3 .rank-label { background: #cd7f32; color: #000; }
-
   .result-top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
   .result-flag { font-size: 34px; }
   .result-info { flex: 1; }
   .result-city { font-size: 20px; font-weight: 800; }
   .result-country { font-size: 12px; color: var(--muted); }
   .result-score { font-size: 13px; color: var(--gold); font-weight: 700; margin-top: 2px; }
-
   .result-meter {
     background: var(--border);
     height: 5px;
@@ -402,14 +388,12 @@
     background: linear-gradient(90deg, var(--gold), var(--gold-light));
     border-radius: 3px;
   }
-
   .result-desc {
     font-size: 13px;
     color: #bbb;
     line-height: 1.6;
     margin-bottom: 16px;
   }
-
   .result-actions {
     display: flex;
     gap: 8px;
@@ -440,7 +424,6 @@
     color: #fff;
   }
   .btn-discord:hover { opacity: 0.9; }
-
   /* FOOTER */
   .quiz-footer {
     text-align: center;
@@ -449,7 +432,6 @@
     color: #444;
   }
   .quiz-footer a { color: var(--gold); text-decoration: none; }
-
   @media (max-width: 480px) {
     .intro-stats { gap: 20px; }
     .locked-results { gap: 8px; }
@@ -460,20 +442,19 @@
 </head>
 <body>
 <div class="container">
-
   <!-- INTRO SCREEN -->
   <div id="screen-intro" class="screen active">
     <div class="header">
       <div class="brand">Passport Pro by PieroLiero</div>
       <h1>Find Your <span>Highest ROI</span> Travel Market</h1>
-      <p>8 questions. Personalized city matches. Built on actual market data.</p>
+      <p>7 questions. Personalized city matches. Built on actual market data.</p>
     </div>
     <div class="intro-card">
       <div class="intro-icon">🌍</div>
       <h2>The <span>Destination Match</span> Quiz™</h2>
-      <p>Your exchange rate isn't the same everywhere. Answer 8 questions and we'll tell you exactly which markets are moving in your favor right now.</p>
+      <p>Your exchange rate isn't the same everywhere. Answer 7 questions and we'll tell you exactly which markets are moving in your favor right now.</p>
       <div class="intro-stats">
-        <div class="stat"><div class="stat-num">8</div><div class="stat-label">Questions</div></div>
+        <div class="stat"><div class="stat-num">7</div><div class="stat-label">Questions</div></div>
         <div class="stat"><div class="stat-num">26</div><div class="stat-label">Markets</div></div>
         <div class="stat"><div class="stat-num">3</div><div class="stat-label">Top Matches</div></div>
       </div>
@@ -481,7 +462,6 @@
     </div>
     <div class="quiz-footer">By <a href="https://www.passportpro.co/store" target="_blank">PieroLiero</a> · Passport Pro™</div>
   </div>
-
   <!-- QUESTION SCREEN -->
   <div id="screen-question" class="screen">
     <div class="header">
@@ -504,7 +484,6 @@
       <button class="btn btn-primary" id="btn-next" onclick="nextQuestion()" disabled>Continue →</button>
     </div>
   </div>
-
   <!-- CALCULATING SCREEN -->
   <div id="screen-calculating" class="screen">
     <div class="calculating">
@@ -519,7 +498,6 @@
       </div>
     </div>
   </div>
-
   <!-- RESULTS PREVIEW (email gate) -->
   <div id="screen-preview" class="screen">
     <div class="header">
@@ -536,7 +514,6 @@
         <div class="match-pct" id="preview-pct"></div>
         <div class="match-teaser" id="preview-teaser"></div>
       </div>
-
       <div class="locked-overlay">
         <div class="lock-icon">🔒</div>
         Your #2 and #3 matches are locked
@@ -552,7 +529,6 @@
         </div>
       </div>
     </div>
-
     <div class="email-gate">
       <h3>Unlock Your Full <span>Market Report</span></h3>
       <p>Enter your email to see all 3 matches with full intel — neighborhoods, what to expect, and the guide for your top market.</p>
@@ -564,7 +540,6 @@
     </div>
     <div class="quiz-footer">Passport Pro™ by <a href="https://www.passportpro.co/store" target="_blank">PieroLiero</a></div>
   </div>
-
   <!-- FULL RESULTS -->
   <div id="screen-results" class="screen">
     <div class="header">
@@ -575,27 +550,23 @@
       <p>Based on your profile, exchange rate, and market conditions</p>
     </div>
     <div id="full-results-cards"></div>
-
     <!-- Master CTA -->
-    <div style="background:var(--dark2);border:1.5px solid var(--border);border-radius:14px;padding:24px;text-align:center;margin-top:8px;">
-      <div style="font-size:20px;margin-bottom:8px;">📚</div>
-      <div style="font-size:16px;font-weight:700;margin-bottom:6px;">Want the complete intel?</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.5;">
-        Discord members get access to <strong style="color:var(--text)">all 3 regional guides</strong>, vetted local contacts, updated market reports, and the full Passport Pro playbook. One subscription.
+    <div style="background:var(--dark2);border:1.5px solid rgba(88,101,242,0.5);border-radius:14px;padding:28px 24px;text-align:center;margin-top:8px;box-shadow:0 0 24px rgba(88,101,242,0.12);">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.1em;color:rgba(88,101,242,0.9);text-transform:uppercase;margin-bottom:10px;">Members Only</div>
+      <div style="font-size:18px;font-weight:800;margin-bottom:10px;color:var(--text);line-height:1.3;">The guys already inside know<br>something you don't.</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">
+        While you're still reading travel blogs, Discord members have the <strong style="color:var(--text)">regional guides</strong>, vetted local contacts, live market intel, and a community of guys who've already done what you're planning. <strong style="color:var(--text)">$2.99/mo.</strong>
       </div>
-      <a href="https://whop.com/passport-pro/the-world-is-yours-0d/" target="_blank" class="action-btn btn-discord" style="display:block;padding:14px;font-size:14px;border-radius:10px;text-decoration:none;">
-        📚 Join Discord — $2.99/mo
+      <a href="https://whop.com/passport-pro/the-world-is-yours-0d/" target="_blank" class="action-btn btn-discord" style="display:block;padding:16px 24px;font-size:15px;font-weight:700;border-radius:10px;text-decoration:none;background:rgba(88,101,242,0.15);border:1px solid rgba(88,101,242,0.6);color:#fff;">
+        🌍 Join Passport Pro Discord — $2.99/mo
       </a>
     </div>
-
     <div style="text-align:center;margin-top:16px;">
       <button onclick="restartQuiz()" style="background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;text-decoration:underline;">Retake the quiz</button>
     </div>
     <div class="quiz-footer" style="margin-top:20px;">Passport Pro™ by <a href="https://www.passportpro.co/store" target="_blank">PieroLiero</a></div>
   </div>
-
 </div>
-
 <script>
 // ─── DESTINATIONS (verified from Passport Pro Master Guide only — all 28 cities) ──
 const destinations = {
@@ -799,10 +770,8 @@ const destinations = {
     guideUrl: 'https://www.passportpro.co/store', guideName: 'Europe Guide', guidePrice: '$19.99'
   }
 };
-
 // ─── GEO DETECTION ───────────────────────────────────────────────
 let userHomeRegion = 'northamerica'; // default fallback
-
 const quickTripScoresByRegion = {
   // North America: boost Mexico/Colombia/Peru, penalize Brazil (11-12h), Europe & Asia (14h+)
   northamerica: {
@@ -830,17 +799,13 @@ const quickTripScoresByRegion = {
     amsterdam: -3, budapest: -3, athens: -3, ibiza: -3, hamburg: -3, bucharest: -3, split: -3, mykonos: -3, austria: -3, stockholm: -3
   }
 };
-
 function continentToRegion(continent, country) {
   // Europe
   if (continent === 'EU') return 'europe';
-
   // South America → LATAM
   if (continent === 'SA') return 'latam';
-
   // Oceania (Australia, NZ, Pacific) → Asia. Bali is 3.5h from Perth
   if (continent === 'OC') return 'asia';
-
   // North America — split by country
   if (continent === 'NA') {
     // Central America & Caribbean → LATAM (they're already in the region)
@@ -848,7 +813,6 @@ function continentToRegion(continent, country) {
     if (centralAmericaCaribbean.includes(country)) return 'latam';
     return 'northamerica'; // US, Canada, Mexico (Mexico City is a quick trip from US)
   }
-
   // Asia — split Middle East from the rest
   if (continent === 'AS') {
     // Middle East → Asia (Dubai/Riyadh to Bangkok ~6h, Bali ~7h)
@@ -857,7 +821,6 @@ function continentToRegion(continent, country) {
     // Everything else in AS (India, SE Asia, East Asia, Central Asia) → Asia
     return 'asia';
   }
-
   // Africa — split by subregion
   if (continent === 'AF') {
     // North Africa → Europe (Casablanca to Madrid: 1h, Tunis to Rome: 1.5h)
@@ -866,10 +829,8 @@ function continentToRegion(continent, country) {
     // Sub-Saharan & Southern Africa → Europe (main travel hub for ZA, KE, NG etc.)
     return 'europe';
   }
-
   return 'northamerica'; // Antarctica / unknown fallback
 }
-
 // Fetch IP geo on load — silent fallback if it fails or times out
 (function detectRegion() {
   const timeout = new Promise((_, reject) => setTimeout(() => reject('timeout'), 3000));
@@ -886,7 +847,6 @@ function continentToRegion(continent, country) {
       questions = buildQuestions();
     });
 })();
-
 // ─── QUESTIONS ───────────────────────────────────────────────────
 function buildQuestions() { return [
   {
@@ -917,16 +877,6 @@ function buildQuestions() { return [
       { label: "Culture & food", sub: "Exploring, eating, experiencing", scores: { hcmc: 3, athens: 5, cartagena: 2, rio: 2, lima: 4, mexicocity: 3, budapest: 3, seoul: 3, bucharest: 2, split: 2, ibiza: -3, mykonos: -2, pattaya: -2, amsterdam: -1, tokyo: 5, stockholm: 2 } },
       { label: "Beach & relax", sub: "Sun, water, no agenda", scores: { cartagena: 4, rio: 3, balneario: 4, ibiza: 2, pattaya: 2, tijuana: 2, split: 3, mykonos: 3, bali: 4, siargao: 4, phuket: 3, budapest: -3, bucharest: -3, austria: -3, mexicocity: -3, angeles: -3, medellin: -4, hamburg: -3, amsterdam: -3, saopaulo: -3, seoul: -3, bangkok: -3, hcmc: -3, manila: -3, lima: -2, tokyo: -4, stockholm: -4 } },
       { label: "Full send — all of it", sub: "Maximum passport ROI", scores: { medellin: 2, balneario: 2, pattaya: 2, rio: 2, ibiza: 2, tijuana: 2, saopaulo: 2, amsterdam: 2, budapest: 2, angeles: 3, phuket: 2, cartagena: 2, mykonos: 2, bali: 2 } }
-    ]
-  },
-  {
-    title: "What region are you most curious about?",
-    sub: "Trust the algorithm to pick your market.",
-    options: [
-      { label: "Latin America", sub: "LATAM energy, passion, chaos", scores: { medellin: 4, cartagena: 4, rio: 4, balneario: 4, saopaulo: 4, lima: 2, tijuana: 4, mexicocity: 3, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, seoul: -4, bali: -4, siargao: -4, angeles: -4, manila: -4, hcmc: -4, phuket: -4, pattaya: -4, bangkok: -4, tokyo: -4, stockholm: -4 } },
-      { label: "Europe", sub: "Old world, new experiences", scores: { amsterdam: 4, hamburg: 3, budapest: 4, bucharest: 3, austria: 2, athens: 4, split: 3, ibiza: 4, mykonos: 3, stockholm: 4, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, lima: -4, tijuana: -4, mexicocity: -4, seoul: -4, bali: -4, siargao: -4, angeles: -4, manila: -4, hcmc: -4, phuket: -4, pattaya: -4, bangkok: -4, tokyo: -4 } },
-      { label: "Asia", sub: "Southeast Asia & beyond", scores: { seoul: 3, bali: 4, siargao: 3, angeles: 4, manila: 4, hcmc: 4, phuket: 3, pattaya: 4, bangkok: 4, tokyo: 4, medellin: -4, cartagena: -4, rio: -4, balneario: -4, saopaulo: -4, lima: -4, tijuana: -4, mexicocity: -4, amsterdam: -4, hamburg: -4, budapest: -4, bucharest: -4, austria: -4, athens: -4, split: -4, ibiza: -4, mykonos: -4, stockholm: -4 } },
-      { label: "No preference", sub: "Let the algorithm decide", scores: { medellin: 1, cartagena: 1, rio: 1, balneario: 1, saopaulo: 1, lima: 1, tijuana: 1, mexicocity: 1, amsterdam: 1, hamburg: 1, budapest: 1, bucharest: 1, austria: 1, athens: 1, split: 1, ibiza: 1, mykonos: 1, seoul: 1, bali: 1, siargao: 1, angeles: 1, manila: 1, hcmc: 1, phuket: 1, pattaya: 1, bangkok: 1, tokyo: 1, stockholm: 1 } }
     ]
   },
   {
@@ -967,15 +917,12 @@ function buildQuestions() { return [
     ]
   }
 ]; }
-
 let questions = buildQuestions();
-
 // ─── STATE ────────────────────────────────────────────────────────
 let currentQ = 0;
 let selectedOption = null;
 let answers = [];
 let topMatches = [];
-
 // ─── QUIZ LOGIC ───────────────────────────────────────────────────
 function startQuiz() {
   currentQ = 0;
@@ -986,7 +933,6 @@ function startQuiz() {
   showScreen('screen-question');
   renderQuestion();
 }
-
 function renderQuestion() {
   const q = questions[currentQ];
   document.getElementById('q-label').textContent = `Question ${currentQ + 1} of ${questions.length}`;
@@ -998,10 +944,8 @@ function renderQuestion() {
   document.getElementById('btn-back').style.display = currentQ > 0 ? 'block' : 'none';
   document.getElementById('btn-next').disabled = true;
   document.getElementById('btn-next').textContent = currentQ === questions.length - 1 ? 'See My Results →' : 'Continue →';
-
   const saved = answers[currentQ];
   selectedOption = saved !== undefined ? saved : null;
-
   const container = document.getElementById('q-options');
   container.innerHTML = '';
   q.options.forEach((opt, i) => {
@@ -1011,10 +955,8 @@ function renderQuestion() {
     div.onclick = () => selectOption(i);
     container.appendChild(div);
   });
-
   if (selectedOption !== null) document.getElementById('btn-next').disabled = false;
 }
-
 function selectOption(i) {
   selectedOption = i;
   document.querySelectorAll('.option').forEach((el, idx) => {
@@ -1022,18 +964,15 @@ function selectOption(i) {
   });
   document.getElementById('btn-next').disabled = false;
 }
-
 function nextQuestion() {
   if (selectedOption === null) return;
   answers[currentQ] = selectedOption;
-
   // Apply scores
   const q = questions[currentQ];
   const scores = q.options[selectedOption].scores;
   Object.entries(scores).forEach(([dest, pts]) => {
     if (destinations[dest]) destinations[dest].score += pts;
   });
-
   if (currentQ < questions.length - 1) {
     currentQ++;
     selectedOption = null;
@@ -1042,7 +981,6 @@ function nextQuestion() {
     calculateResults();
   }
 }
-
 function prevQuestion() {
   if (currentQ === 0) return;
   // Undo scores for current-1
@@ -1059,49 +997,34 @@ function prevQuestion() {
   selectedOption = answers[currentQ] !== undefined ? answers[currentQ] : null;
   renderQuestion();
 }
-
 function calculateResults() {
   showScreen('screen-calculating');
   setTimeout(() => {
-    // Hard-filter by selected region (question index 3)
-    const regionQ = questions[3]; // "What region are you most curious about?"
-    const regionAns = answers[3];
-    const regionLabel = regionAns !== undefined ? regionQ.options[regionAns].label : 'No preference';
-    const regionMap = { 'Latin America': 'latam', 'Europe': 'europe', 'Asia': 'asia' };
-    const lockedRegion = regionMap[regionLabel]; // undefined if "No preference"
-
-    // Sort destinations by score, excluding cities outside chosen region
+    // Sort destinations by score
     topMatches = Object.entries(destinations)
-      .filter(([key, d]) => !lockedRegion || d.region === lockedRegion)
       .sort((a, b) => b[1].score - a[1].score)
       .slice(0, 3)
       .map(([key, d]) => ({ key, ...d }));
-
     showPreview();
   }, 2800);
 }
-
 function showPreview() {
   const top = topMatches[0];
-  const maxPossible = 20;
+  const maxPossible = 16;
   const pct = Math.min(Math.round((top.score / maxPossible) * 100), 98);
-
   document.getElementById('preview-flag').textContent = top.flag;
   document.getElementById('preview-city').textContent = top.name;
   document.getElementById('preview-country').textContent = top.country;
   document.getElementById('preview-pct').textContent = pct + '% compatibility';
   document.getElementById('preview-teaser').textContent = top.teaser;
-
   showScreen('screen-preview');
   setTimeout(() => {
     document.getElementById('preview-meter').style.width = pct + '%';
   }, 300);
 }
-
 // ── REPLACE THIS with your deployed Apps Script Web App URL ──────────────────
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyQ4B7WHBLX56TOLQ4IZL7LIUd6HHDcWhkthSzfHJZUfeuG4BXGILddbOe7RYpQq7D3Dg/exec';
 // ─────────────────────────────────────────────────────────────────────────────
-
 function submitEmail() {
   const email = document.getElementById('email-input').value.trim();
   if (!email || !email.includes('@')) {
@@ -1109,12 +1032,10 @@ function submitEmail() {
     document.getElementById('email-input').placeholder = 'Enter a valid email';
     return;
   }
-
   // Disable button while submitting
   const btn = document.querySelector('.email-gate .btn-primary');
   btn.disabled = true;
   btn.textContent = 'Unlocking...';
-
   // Fire-and-forget POST to Google Sheets
   // No Content-Type header — required for no-cors mode to work correctly with Apps Script
   fetch(SHEET_URL, {
@@ -1129,18 +1050,14 @@ function submitEmail() {
       timestamp: new Date().toISOString()
     })
   }).catch(() => {}); // Silent fail — results always show regardless
-
   showFullResults();
 }
-
 function showFullResults() {
-  const maxPossible = 20;
+  const maxPossible = 16;
   const container = document.getElementById('full-results-cards');
   container.innerHTML = '';
-
   const rankLabels = ['🥇 #1 Match', '🥈 #2 Match', '🥉 #3 Match'];
   const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
-
   topMatches.forEach((d, i) => {
     const pct = Math.min(Math.round((d.score / maxPossible) * 100), 98);
     const card = document.createElement('div');
@@ -1159,15 +1076,13 @@ function showFullResults() {
       <div class="result-desc">${d.desc}</div>
       <div class="result-actions">
         <a href="${d.guideUrl}" target="_blank" class="action-btn btn-guide">📖 Get the ${d.guideName} — ${d.guidePrice}</a>
-        <a href="https://whop.com/passport-pro/the-world-is-yours-0d/" target="_blank" class="action-btn btn-discord">📚 Discord — $2.99/mo</a>
+        <a href="https://whop.com/passport-pro/the-world-is-yours-0d/" target="_blank" class="action-btn btn-discord">🌍 Discord — $2.99/mo</a>
       </div>
     `;
     container.appendChild(card);
   });
-
   showScreen('screen-results');
 }
-
 function restartQuiz() {
   Object.keys(destinations).forEach(k => destinations[k].score = 0);
   answers = [];
@@ -1176,19 +1091,16 @@ function restartQuiz() {
   topMatches = [];
   showScreen('screen-intro');
 }
-
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
   setTimeout(sendHeight, 100);
 }
-
 function sendHeight() {
   const h = document.body.scrollHeight;
   window.parent.postMessage({ iframeHeight: h }, '*');
 }
-
 if (window.ResizeObserver) {
   const ro = new ResizeObserver(() => sendHeight());
   ro.observe(document.body);
