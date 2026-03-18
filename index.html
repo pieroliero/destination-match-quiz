@@ -1095,11 +1095,11 @@ function submitEmail() {
   btn.disabled = true;
   btn.textContent = 'Unlocking...';
 
-  // Fire-and-forget POST to Google Sheets — never blocks the user
+  // Fire-and-forget POST to Google Sheets
+  // No Content-Type header — required for no-cors mode to work correctly with Apps Script
   fetch(SHEET_URL, {
     method: 'POST',
     mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       email: email,
       top_match: topMatches[0].name,
