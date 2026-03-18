@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Destination Match Quiz™ | Passport Pro by PieroLiero</title>
 <link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f0a500">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dest Match">
+<link rel="apple-touch-icon" href="icon-192.png">
 <meta property="og:title" content="Destination Match Quiz™ | Passport Pro"/>
 <meta property="og:description" content="Find your highest ROI travel market. 8 questions. Personalized results."/>
 <meta property="og:image" content="og_image.png"/>
@@ -1194,6 +1201,11 @@ if (window.ResizeObserver) {
   ro.observe(document.body);
 } else {
   window.addEventListener('load', sendHeight);
+}
+
+// ── SERVICE WORKER REGISTRATION ────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
 }
 </script>
 </body>

@@ -1,0 +1,16 @@
+{
+  "name": "Destination Match Quiz™",
+  "short_name": "Dest Match",
+  "description": "Answer 8 questions. Get your perfect destination. Passport Pro by PieroLiero.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#f0a500",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["lifestyle", "travel"],
+  "screenshots": []
+}
