@@ -1095,6 +1095,11 @@ function restartQuiz() {
   currentQ = 0;
   selectedOption = null;
   topMatches = [];
+  // Reset email gate
+  const emailInput = document.getElementById('email-input');
+  if (emailInput) { emailInput.value = ''; emailInput.style.borderColor = ''; }
+  const unlockBtn = document.querySelector('.email-gate .btn-primary');
+  if (unlockBtn) { unlockBtn.disabled = false; unlockBtn.textContent = 'Unlock My Report →'; }
   showScreen('screen-intro');
 }
 function showScreen(id) {
