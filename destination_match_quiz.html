@@ -308,8 +308,9 @@
   .locked-overlay {
     text-align: center;
     margin-bottom: 24px;
-    font-size: 13px;
-    color: var(--muted);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
   }
   .lock-icon { font-size: 20px; margin-bottom: 4px; }
   /* EMAIL GATE */
@@ -520,6 +521,15 @@
         <div class="lock-icon">🔒</div>
         Your #2 and #3 matches are locked
       </div>
+      <div class="email-gate">
+        <h3>Unlock Your Full <span>Market Report</span></h3>
+        <p>Enter your email to see all 3 matches with full intel — neighborhoods, what to expect, and the guide for your top market.</p>
+        <div class="email-form">
+          <input type="email" class="email-input" id="email-input" placeholder="your@email.com" />
+          <button class="btn btn-primary" onclick="submitEmail()">Unlock My Report →</button>
+          <div class="privacy-note">🔒 No spam. Unsubscribe anytime. Your intel, your business.</div>
+        </div>
+      </div>
       <div class="locked-results">
         <div class="locked-card">
           <div class="lock-flag">🌍</div>
@@ -529,15 +539,6 @@
           <div class="lock-flag">🌍</div>
           <div class="lock-city">Match #3</div>
         </div>
-      </div>
-    </div>
-    <div class="email-gate">
-      <h3>Unlock Your Full <span>Market Report</span></h3>
-      <p>Enter your email to see all 3 matches with full intel — neighborhoods, what to expect, and the guide for your top market.</p>
-      <div class="email-form">
-        <input type="email" class="email-input" id="email-input" placeholder="your@email.com" />
-        <button class="btn btn-primary" onclick="submitEmail()">Unlock My Report →</button>
-        <div class="privacy-note">🔒 No spam. Unsubscribe anytime. Your intel, your business.</div>
       </div>
     </div>
     <div class="quiz-footer">Passport Pro™ by <a href="https://www.passportpro.co/store" target="_blank">PieroLiero</a></div>
